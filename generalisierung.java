@@ -12,7 +12,7 @@ public class generalisierung<datatype>{
 	public datatype getText(){
 		return this.data;
 	}
-
+	// wie funktionieren methoden mit generics ?
 	public void writeToFile(datatype location, datatype msg){
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter((String)location))){
 			bw.write((String)msg);
