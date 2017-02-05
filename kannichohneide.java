@@ -1,14 +1,18 @@
-import java.io.*;
-import java.lang.*;
-import java.util.*;
+//the impoerts should be named..
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.lang.Exception;
+import java.io.IOException;
+import java.util.Scanner;
 public class kannichohneide{
-	
+//making this onbject-oriented is better..	
 public static void main(String[] args){
 		
-
-	methode("G:/Users/Progamer/Desktop/j/test.txt","G:/Users/Progamer/Desktop/j/test2.txt");
+	kannichohneide k = new kannichohneide();
+	k.methode("G:/Users/Progamer/Desktop/j/test.txt","G:/Users/Progamer/Desktop/j/test2.txt");
+	
 }
-public static void methode(String data1, String data2){
+public void methode(String data1, String data2){
 
 
 	try(BufferedReader br = new BufferedReader(new FileReader(data1));
