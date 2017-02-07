@@ -6,7 +6,7 @@ public class ArrayRekursivAufzaehlen{
 	public static void main(String[] args){
 		int[] digit = {3,2,6,4,8};
 		rekursion(digit,0);
-
+		//i++ is maybe wrong ???
 	}
 	public static void rekursion(int[] digit,int i){
 
