@@ -1,5 +1,5 @@
 public class Arrays {
-  
+  //NICE !
   public static void main(String[] args) {
     
     String[] namenSpieler = {"Super Mario", "Luigi", "Yoshi", "Toad"};
