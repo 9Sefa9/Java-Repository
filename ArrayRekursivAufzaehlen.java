@@ -15,7 +15,7 @@ public class ArrayRekursivAufzaehlen{
 		}
 		else{ 
 			rekursion(digit, i+1);
-			System.out.println(digit[i]);
+			System.out.println(digit[i]);//verstehe die Logik nicht
 			
 		}
 	}
