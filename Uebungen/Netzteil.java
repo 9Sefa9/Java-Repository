@@ -1,5 +1,12 @@
-public interface Netzteil{ 
+public class Netzteil extends Computer{ 
 
-	public void Start(float spannung, boolean turnon);
-	public void Stop(boolean turnoff);
+	public void Start2(float spannung, boolean turnon){
+		System.out.println("off");
+	}
+	public void Stop2(boolean turnoff){
+		System.out.println("off");
+	}
+	public void test2(){
+		System.out.println("hi");
+	}
 }
