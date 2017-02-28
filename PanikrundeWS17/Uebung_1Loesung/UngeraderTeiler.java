@@ -1,4 +1,4 @@
-package Uebung_1;
+
 
 public class UngeraderTeiler {
 
@@ -10,13 +10,9 @@ public class UngeraderTeiler {
 
 	private static int ungeraderTeiler(int in) {
 		if ((in % 2 ) != 0) 
-		{
 			return in;
-		}
 		else
-		{
 			return ungeraderTeiler(in/2);
-		}
 	}
 
 }

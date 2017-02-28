@@ -10,9 +10,8 @@ public class Quersumme{
 			String str = ""+zahl;
 			int b =0;
 			for(int i = 0; i<=str.length()-1;i++){
-				char a = str.charAt(i);
-				String d = ""+a;
-				b+=(Integer.parseInt(d));				
+				char a = str.charAt(i);			
+				b+=(Integer.parseInt(""+a));				
 			}
 			return b;
 	}
