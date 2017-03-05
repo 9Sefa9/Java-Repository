@@ -1,11 +1,22 @@
 public class Frequentletter{
-	private static String[] s = {"S","H","A","A","F"};
+	private static int[] s = {20,101,37,79,126};
 	
 	public static void main(String[] args){
-		getFrequentletter(s);
+		System.out.println(getFrequentletter(s));
 	}
+	public static char getFrequentletter(int[] s){
+		int max = 0;
+		for(int i = 0; i<=s.length-1; i++){
+			if(s[i]>max)
+				max = s[i];
 
-	public static void getFrequentletter(String[] s){
-		
-}
+			if(s[i]<max)
+				continue;
+
+			if(s[i] == max)
+				continue;
+		}
+		char c = (char)max;
+		return c;
+	}
 }
