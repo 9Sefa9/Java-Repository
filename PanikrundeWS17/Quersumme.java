@@ -1,10 +1,11 @@
 public class Quersumme{
 	public static void main(String[] args){
-		int zahl = Integer.parseInt(args[0]);
+		int zahl = Integer.parseInt("46");
 		int quersum = berechneQuersummeIterativ(zahl);
 		System.out.println("Die iterativ: "+quersum);
 		int quersum2 = berechneQuersummeRekursiv(zahl);
 		System.out.println("Die rekursive: "+quersum2);
+		
 	}
 	public static int berechneQuersummeIterativ(int zahl){
 			String str = ""+zahl;
