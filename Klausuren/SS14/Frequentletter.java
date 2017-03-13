@@ -3,6 +3,7 @@ public class Frequentletter{
 	
 	public static void main(String[] args){
 		System.out.println(getFrequentletter(s));
+		getFrequentletter();
 	}
 	public static char getFrequentletter(int[] s){
 		int max = 0;
@@ -18,5 +19,9 @@ public class Frequentletter{
 		}
 		char c = (char)max;
 		return c;
+	}
+	public static void getFrequentletter(){
+
+		}
 	}
 }
