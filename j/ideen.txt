@@ -1,0 +1,36 @@
+	Erste ideen
+	Story 
+	
+	- Prolog erstellen (vllt durch drücken nächste sequenz ?)
+	- eine ausgeklügelte Story, de den spieler ans ende bringt
+	- Moralische entscheidungen (emotionale und moralische ebene) 
+	- Treffen auf einem Monster ! was kann gemacht werden ? 
+	- Dialoge, A,B,C,D (immer weglaufen)
+	- Zombie / 
+	- Random funktion (10 oder 2 seitig)
+	
+	- erhöhung der chance bei Items (random /set oder Getter)	
+
+	Charakter:
+	- Charaktererstellung name und alter
+	- Equipment auswahl z.b Feuerzeug, Messer oder sonstigem
+ 	- Charakter (charisma (Sozialfähigkeit), agressiv, ruhige, schlaue,schnelligkeit 
+	- Name / Alter
+	- geschlecht
+
+   Setting RPG   -->Lvl System
+  -Science Fiction 
+  -Welt (hintergrund)
+
+
+
+
+
+
+
+
+
+
+
+
+

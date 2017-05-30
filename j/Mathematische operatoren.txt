@@ -1,0 +1,30 @@
+//Mathematische Operatoren
+/*
+import java.lang.Math;
+1
+Math.ceil(25.3);
+Rundet auf die nächste ganze Zahl auf, also auf 26.
+
+1
+Math.floor(8.9);
+Rundet auf die nächste ganze Zahl ab, also auf 8.
+
+1
+Math.abs(-13.3);
+Errechnet den Absolutwert (den Unterschied zu 0. Gibt immer eine positive Zahl aus)
+
+Math.min(7.3, 3.3);
+Gibt die niedrigere der beiden Zahlen aus.
+
+1
+Math.max(7.3, 3.3);
+Gibt die höhere der beiden Zahlen aus.
+
+1
+Math.pow(3, 4);
+Gibt den 3^4 (drei hoch vier) aus. also 243.
+
+1
+Math.sqrt(25);
+Gibt die Quadratwurzel aus.
+*/

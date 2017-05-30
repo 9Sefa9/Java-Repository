@@ -1,0 +1,30 @@
+package LernPaket;
+
+public class QuicksortIntuitivNichtKomplett {
+
+	private Comparable[] array;
+	
+	public QuicksortIntuitivNichtKomplett(int N){
+		array = (Comparable[]) new Object[N];
+	}
+	public static void sort(int [] array){
+		int lo = 0;
+		int hi = array.length;
+		
+	}
+	public static Comparable[](Comparable[] swap, int v, int w){
+			swap = new Comparable[];
+			
+	}
+	public static Comparable less(int v, int w){
+		return v.compareTo(w);
+	}
+	
+	
+
+
+	public static void main(String[] args){
+		
+	}
+	
+}
