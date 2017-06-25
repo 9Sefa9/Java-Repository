@@ -22,6 +22,7 @@ public class PerfekteZahlen{
 		System.out.println("Wahrheitwert: "+wahrheitswert);
 	}
 }
+//loop variante, mit for schleife etwas besser!
 /*public class PerfectLoop {
     public static void main(String... args) {
         int n = 2;
