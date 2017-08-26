@@ -1,5 +1,3 @@
-package PanikRunde;
-
 import java.util.Scanner;
 
 public class GrößterGemeinsamerTeiler {

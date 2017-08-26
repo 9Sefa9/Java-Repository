@@ -27,6 +27,6 @@ public class RekursionPrüfungsAufgabe{
 			System.out.println(array[j]);
 			System.out.println(array[j]);
 
-			Eigentlich einfach. Man muss es halt nur anders denken!
-			
+
+
 */

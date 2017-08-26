@@ -21,7 +21,6 @@ public class ArrayMethoden{
 	  for(int i : array)
 		System.out.print(i+", ");   
   }
-  //bubble sort 
   public static void sortieren(int[] array){
 		int[] array2 = new int[array.length];
 		
