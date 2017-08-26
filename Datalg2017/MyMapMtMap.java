@@ -1,40 +1,46 @@
 
-public class MyMapMtMap<Map> implements MyMap<Map>{
+public class MyMapMtMap<K,V> implements MyMap<K,V>{
 
     public MyMapMtMap(){
 
     }
-    public Map[] insert(int key,int value, Map[] map){
+    public MyMap<K,V> insert(int key,int value, MyMap<K,V> map){
+    		return new MyMapFunctions<K,V>(key,value,new MyMapMtMap<K,V>());
+            /*
+            MyMapMtMap<K,V> temp = new MyMapMtMap<K,V>();
+
             Map[] tempMap = new Map[map.length-1];
             tempMap[key] = value;
             return tempMap;
+            */
     }
-    public Map[] update(int key, int value, Map[] map){
+    public MyMap<K,V> update(int key, int value, MyMap<K,V> map){
         if(isInDom(key,map).equals(false))
             break;
-        else map[key] = value;
+        else return MyMapFunctions(key,value,map);
     }
-    public boolean isInDom(int key, Map[] map) {
+    public boolean isInDom(int key, MyMap<K,V> map) {
          if(map[key] == null)
               return false;
 
         return true;
     }
-    public int lookup(int key, Map[] map){
+    public int lookup(int key, MyMap<K,V> map){
         assert isInDom(key, map).equals(true);
         return map[key];
     }
-    public MyOption<T> lookup_op(int key, Map[] map){
-        //vorerst
+    /*
+    public MyOption<T> lookup_op(int key, MyMap<K,V> map){
+        vorerst
         return null;
-        //return MyOption<map[key]>;
+        return MyOption<map[key]>;
     }
-
-    public Map[] delete(int key, Map[] map){
+	*/
+    public MyMap<K,V> delete(int key, MyMap<K,V> map){
         return map[key] = null;
     }
 
-    public Map[] union(Map[] map1, Map[] map2){
+    public MyMap<K,V> union(MyMap<K,V> map1, MyMap<K,V> map2){
             int length = map1.length+map2.length;
             Map[] temp = new Map[length];
 
@@ -47,7 +53,7 @@ public class MyMapMtMap<Map> implements MyMap<Map>{
             return temp;
     }
 
-    public int size(Map[] map){
+    public int size(MyMap<K,V> map){
         int counter = 0;
         for(int i = 0; i< map.length;i++)
             if(map[i] != null)
