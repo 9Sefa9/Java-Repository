@@ -1,5 +1,3 @@
-package Algorithmen;
-
 
 public class MergeSort {
 	private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
