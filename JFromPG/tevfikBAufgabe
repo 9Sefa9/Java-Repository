@@ -1,0 +1,23 @@
+double smoothValue=1.0;
+
+smoothValue=value;
+//ersetze in dieser klasse alle windowsize zu 19 
+#define windowsize 19
+
+static double window[windowsize]={0};
+
+static int actPos=0;
+
+window[actPos]=value;
+
+actPos++;
+if(actPos>=windowsize)
+actPos = 0;
+for (int i=0; i<windowsize; i++)
+smoothValue+=window[i];
+
+
+smoothValue/=windowsize;
+
+return smoothValue;
+
