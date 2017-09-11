@@ -1,5 +1,5 @@
 Remotedesktopverbindung:
-
+public ip herausfindung: curl ipinfo.io/ip
 Username: pi
 password: paro
 
