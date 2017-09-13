@@ -1,7 +1,14 @@
 h1,h2,h3{
 	text-align:center;
+	font-family: Comic Sans MS,sans-serif;
+	font-size: 1em
+	
 }
 
 .test{
 	color:red;
+}
+.picture{
+	max-width:100%;
+      height:auto;
 }
