@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DonutDownloader:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DonutDownloader_jar</output-path>
+    <root id="archive" name="DonutDownloader.jar">
+      <element id="module-output" name="DonutDownloader" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Intellij-Repository/5.Semester/src/htmlunit-2.27-OSGi.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
