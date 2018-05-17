@@ -21,6 +21,7 @@ public class LoginServer{
         data.put("freddy","f3456");
         data.put("shizui","s1234");
         data.put("pandayapil","p3210");
+	data.put("perez","p123");
     }
     public void Server(){
 
