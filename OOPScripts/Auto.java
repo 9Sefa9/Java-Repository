@@ -1,5 +1,5 @@
 public class Auto{
-	
+
 	private int psstaerke;
 	private int reifen;
 	private int tuere;
