@@ -60,7 +60,16 @@ public class IPFinder extends Thread{
     }
     @Override
     public void run(){
-        checkHosts("192.168.178");
+        for(int i = 0; i<300;i++){
+            for(int j = 0 ; j<300;i++){
+                for(int k = 0 ; i<300; i++){
+                    checkHosts("134."+i+"."+j);
+                }
+                
+            }
+            
+        }
+        
     }
 
 }
