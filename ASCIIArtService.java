@@ -16,7 +16,7 @@ public class ASCIIArtService {
 
     public ASCIIArtService() {
         try {
-            prntwrt = new PrintWriter(filewrt = new FileWriter("C:/Users/Sefa/Desktop/asciiart.txt",
+            prntwrt = new PrintWriter(filewrt = new FileWriter("G:/Users/Progamer/Desktop/asciiart.txt",
                     true));
         } catch (IOException ex) {
         }
@@ -34,6 +34,7 @@ public class ASCIIArtService {
                 pixval = (((pixcol.getRed() * 0.30) + (pixcol.getBlue() * 0.59) + (pixcol
                         .getGreen() * 0.11)));
                 print(strChar(pixval));
+               // System.out.print(strChar(pixval));
             }
             try {
                 prntwrt.println("");
@@ -70,6 +71,7 @@ public class ASCIIArtService {
 
     public void print(String str) {
         try {
+            
             prntwrt.print(str);
             prntwrt.flush();
             filewrt.flush();
@@ -79,6 +81,6 @@ public class ASCIIArtService {
 
     public static void main(String[] args) {
         ASCIIArtService obj = new ASCIIArtService();
-        obj.convertToAscii("C:/Users/Sefa/Desktop/logo.jpg");
+        obj.convertToAscii("G:/Users/Progamer/Desktop/d.jpg");
     }
 }
