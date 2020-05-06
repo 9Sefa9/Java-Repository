@@ -1,41 +1,45 @@
+package ÜbungenLösungen;
 import java.util.Scanner;
-public class Primzahl{
+public class Primzahl {
 
 	public static void main(String[] args) {
-		
-		boolean ergebnis = false; 
-		int eingegebeneZahl;
-		Scanner eingabe = new Scanner(System.in);
-		//UserInput via Scanner Import.
-		
-		System.out.print(" Bitte die Zahl eingeben, wo du denkst, es ist eine Primzahl:>");
-		eingegebeneZahl = eingabe.nextInt();
-		
-		/*Primzahl ermittlung startet erst dann, wenn die Zahl ziwschen 0 und 1000 ist ! ansonsten siehe Zeile 38
-		*k ist != 1 , da laut definition, 1 keine Primzahl ist!
-		* k zÃ¤hlt hoch bis zur eingegebeneZahl
-		*/
-		if((eingegebeneZahl<1000) && (eingegebeneZahl>0)){
-		for (int k = 2; k<eingegebeneZahl; k++) {
-			
-			//wenn der rest zwischen eingegebeneZahl und k == 0 ergibt, 
-			
-			if ((eingegebeneZahl % k) == 0) {
-				ergebnis = true; //wird boolean : ergebnis auf "wahr" eingestellt. 
+		Scanner sc = new Scanner(System.in);
+
+		int a = sc.nextInt();
+		boolean isPrime = true;
+
+		/*
+		 * Nun verwenden wir eine Schleife, die von 1 bis a laeuft, um jede
+		 * dieser Zahlen auf Teilerfremdheit mit a zu ueberpruefen. Wenn die
+		 * Modulo-Operation der Zahl a mit dem momentanen Wert der
+		 * Schleifenvariable i null ergibt, dann ist i ein Teiler von a. Der
+		 * Zaehler fuer die Anzahl der Teiler wird dann inkrementiert.
+		 */
+
+		for (int i = 2; i < a; i++) {
+			if (a % i == 0) {
+				isPrime = false;
+				System.out.println(isPrime);
+				
 			}
 		}
-		//falls weiterhin ergebnis false bleibt, dann ist es eine Primzahl
 		
-		if (ergebnis == false) {
-			System.out.println("zahl ist eine Primzahl");
-		}
+		/*
+		 * Nun wird ausgegeben, ob es sich um eine Primzahl handelt.
+		 */
 
-		else {
-			//ansonsten ist es keine Primzahl!.
-			
-			System.out.println("Zahl ist keine Primzahl");
-		}
-		}else System.out.print("Eingabe ist groesser 1000 oder kleiner 0 !");
+		if( isPrime )
+			System.out.println(isPrime);
+
+		/*
+		 * Nota bene: Hier wurde angenommen, dass die 1 keine Primzahl ist, da
+		 * eine Primzahl per definitionem exakt zwei Teiler hat. Moechte man auch
+		 * die 1 als Primzahl erkannt bekommen aendert man obige Zeile zu:
+		 * System.out.println(teiler <= 2);
+		 * Ferner beachte man, dass in der Klammer, die fuer die Konsolenausgabe
+		 * verantwortlich ist, ein boolscher Ausdruck (Vergleich) steht.
+		 */
 
 	}
+
 }

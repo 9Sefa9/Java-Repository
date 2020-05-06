@@ -1,10 +1,9 @@
-public class Fehler extends Exception{
-	public Fehler(String msg){
-		
-		super(msg);
-		
+package OOP;
+
+public class Fehler extends Exception {
+	
+	public Fehler(String fehler){
+		System.out.println(fehler);
 	}
-	
-	
-	//Exception(String message) kann überschrieben werden. Indem falle handelt es sich um eine Message
+
 }

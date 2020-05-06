@@ -1,3 +1,5 @@
-public class Kaese{
-	
+package Generics;
+
+public class Kaese {
+
 }

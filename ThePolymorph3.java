@@ -4,7 +4,7 @@ public class ThePolymorph3{
 		//poly1 ist super klasse. 
 		//poly2 ist unterklasse(subklasse)
 		ThePolymorph1 tp = new ThePolymorph2(2.0);
-		tp.a1(3);
-		tp.polyester1("HI");
+		System.out.println(tp.bark(3));
+		System.out.println(tp.notbark(3));
 	}
 }

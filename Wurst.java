@@ -1,3 +1,5 @@
-public class Wurst{
-	
+package Generics;
+
+public class Wurst {
+
 }

@@ -1,25 +1,31 @@
-public class bubblesort{
-	public static void main(String[ ]args){
-		int[] ar = {2,7,4,9,5};
-		sort(ar);
-		for(int i: ar){
-			System.out.print(i);
+package Algorithmen;
+
+public class Bubblesort {
+
+	public static void main(String[] args){
+		int [] array = {1,8,2,10,7,5};
+		sort(array);
+		for(int b : array){
+			System.out.print(b);
 		}
 	}
-
-	public static void sort(int[] array){
-		boolean done = false;
+	
+	
+	
+	public static void sort(int[] a){
+		boolean done;
 		do{
-			done = true;
-			for(int i = 1; i<=array.length-1; i++){
-				if(array[i-1] > array[i]){
-					int temp = array[i-1];
-					array[i-1] = array[i];
-					array[i] = temp;
-					done = false;
-				}
+		done = true;
+		for(int i=1; i<a.length; i++){
+			if(a[i-1] > a[i]){
+				int temp = a[i-1];
+				a[i-1] = a[i];
+				a[i] = temp;
+				done = false;
 			}
-
-		}while(!done);
+		}
+			
+		}
+		while(!done);
 	}
 }

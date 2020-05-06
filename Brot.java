@@ -1,3 +1,5 @@
-public class Brot{
-	
+package Generics;
+
+public class Brot {
+
 }

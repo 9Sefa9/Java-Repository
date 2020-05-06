@@ -1,4 +1,5 @@
-public class RekursionPrÃ¼fungsAufgabe{
+package PrüfungsAufgaben;
+public class RekursionPrüfungsAufgabe{
 	public static void main(String[] args){
 	int[] array ={3,1,5,4};
 	printRec(array,0);

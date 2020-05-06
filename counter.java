@@ -1,34 +1,39 @@
+package ÜbungenLösungen;
 import java.util.Scanner;
-public class counter{
-	
-	public static int counter;
-	
-	
-	public static void main(String[] args){
-		
-		String[] str = {"E","E","E","E","F","A"};
-		System.out.println(analysiere(str));
-		System.out.println(counter);
-		
-		
+
+public class Counter {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String eingabe = scan.nextLine();
+		printMostFrequent(eingabe);
 	}
-	public static String analysiere(String[] str){
+
+	public static void printMostFrequent(String str) {
+		// dieses Array speichert die Anzahl der Vorkommen jedes Buchstaben
+		int freq[] = new int[26];		
+
+		// hier wird fuer jedes Auftreten eines Buchstaben der entsprechende
+		// Wert im Array erhoeht
+		// charAt(i) - 'a' sorgt dafuer, jeden Buchstaben auf einen Index
+		// abzubilden: 'a'-'a' -> 0, 'b'-'a' -> 1 usw. bis 'z'-'a' -> 25
 		
-		String leer = "";
-		String inhalt = "";
-		for(int i=0; i<str.length; ++i){
-		    for(int j=i+1; j<str.length; ++j){
-			
-				if((str[i]) == (str[j])){
-					// probleme bei 4 EÂ´s und hÃ¶her..
-					leer += str[i];
-					inhalt = str[i];
-					// counter gibt komischerweise 6 aus.
-					counter = leer.length();
-					
-				}		
-			}
+		for(int i=0; i < str.length(); i++) {
+			freq[str.charAt(i) - 'a']++;
 		}
-	return inhalt;
-	} 
+
+		// Index finden, hinter dem sich der groesste Wert im Array befindet
+		
+		int max = 0;
+		for(int i=1; i < freq.length; i++) {
+			if(freq[i] > freq[max]) max = i;
+		}
+
+		// max enthaelt den Index, 'a' + max ergibt den entsprechenden
+		// Buchstaben und dieser wird ausgegeben
+		System.out.println((char)('a' + max));
+		// Anzahl ausgeben
+		System.out.println(freq[max]);
+	}
+
 }

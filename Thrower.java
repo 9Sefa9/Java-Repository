@@ -1,9 +1,8 @@
-public class Thrower{
-	public static void passDic() throws FrisbeeNotCaught{
+package Exceptions.Exceptions;
+public class Thrower {
+
+	public static void passDisc () throws FrisbeeNotCaught {
+		
 		throw new FrisbeeNotCaught();
 	}
 }
-class FrisbeeNotCaught extends Exception{
-
-}
-

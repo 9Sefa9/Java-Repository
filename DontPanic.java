@@ -1,4 +1,8 @@
-public class DontPanic extends Exception{
+package Übung;
 
+public class DontPanic extends Exception {
 	
 }
+
+	
+

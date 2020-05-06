@@ -1,3 +1,5 @@
-public class Pizza{
-	
+package Generics;
+
+public class Pizza {
+
 }

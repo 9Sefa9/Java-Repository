@@ -1,16 +1,27 @@
-public class sum{
-	
-	public static void main(String[] args){
-		int s ={1,2,3,4,5};
-		System.out.println(sum(s,0));
-	}
-	public static int summe(int[] a, int b){
-		if(b>=0){
-			a[b]+=a[b];
-			int c=a[b];
-			System.out.println(c);
+package Streams;
+import java.util.Scanner;
+public class summe {
+
+	public static void main(String[] args) {
+		try {
+			Scanner eingabe = new Scanner(System.in);
+		
+			System.out.print("Willkommen. Tipp den namen ein den du "
+					+ "switchen möchtest:> ");
+			String Name = eingabe.nextLine();
 			
+			System.out.println("Der geswitchte Name ist :"+switche(Name));
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
-	
+	public static String switche(String name){
+		int i= name.length()-1;
+		String a = "";
+		for( ; 0<=i; --i){
+			a+=name.charAt(i);
+		
+		}
+		return a;
+	}
 }

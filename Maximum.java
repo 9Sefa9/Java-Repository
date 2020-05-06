@@ -1,32 +1,30 @@
-import java.util.Scanner;
-public class Maximum{
-	
-	public static void main(String[] args){
+package LernPaket;
+
+import java.util.*;
+public class Maximum {
+		public static void main(String[] a){
 		
-		int ersteEingabe;
-		
-		Scanner eingabe = new Scanner(System.in);
-		
-		System.out.println("Bitte gib eine Zahl ein!:> ");
-		ersteEingabe = eingabe.nextInt();
-		System.out.print(max(0));
+			int max= 0;
+			
+			System.out.println("Maximum: "+maximum(max));
 		
 		}
+		public static int maximum(int max){
+			Scanner eingabe = new Scanner(System.in);
+			
+			int sum = eingabe.nextInt();
+			
+			if(sum == 0) 
+				return max;
 		
-	
-	public static int max(int zahl, int zahl2){
-		
-		int x;
-		x = eingabe.nextInt();
-		
-		if(x != 0){
-			if(zahl>zahl2){
-				return zahl;
-		....
+			else
+				if(sum>max) 
+					max = sum;
+				
+					return maximum(max);
+			
+				
+			
+				
 		}
-		else return max(zahl>zahl);
-		
-		
-	}
-	
 }

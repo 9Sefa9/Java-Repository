@@ -7,9 +7,6 @@ public class ThePolymorph1{
 		System.out.println("Du hast geschrieben: "+s);
 	}
 	public void polyester2(int s){
-		System.out.println("Das ist die Zahl: "+s);
-	}
-	public void a1(int s){
-		System.out.println(s);
+		System.out.println("Das ist die Zahl: "+s)
 	}
 }

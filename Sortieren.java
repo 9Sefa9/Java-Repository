@@ -1,52 +1,64 @@
 import java.util.Scanner;
-public class Sortieren{
-	public static void main(String[] args)
-	{
-		int zahl1; 
-		int zahl2;
-		int zahl3;
-		Scanner eingabe = new Scanner(System.in);
-		Scanner eingabe2 = new Scanner(System.in);
-		Scanner eingabe3 = new Scanner(System.in);
-		System.out.print("erste (Ganz-)zahl: ");
-		zahl1 = eingabe.nextInt();
-		System.out.print("zweite (Ganz-)zahl: ");
-		zahl2 = eingabe2.nextInt();
-		System.out.print("dritte (Ganz-)zahl: ");
-		zahl3 = eingabe3.nextInt();
+
+public class Sortieren {
+	static Scanner scanner = new Scanner(System.in);
+
+	private static void Sort (int a, int b, int c){
 		
-		if((zahl1<1000 && zahl1>0) && (zahl2<1000 && zahl2>0) && (zahl3<1000 && zahl3>0)){ 
-		if((zahl1>zahl2) && (zahl2>zahl3))
-		{
-			System.out.println(zahl1);
-			System.out.println(zahl2);
-			System.out.println(zahl3);
-		}else if((zahl1>zahl3) && (zahl3>zahl2))
-		{
-			System.out.println(zahl1);
-			System.out.println(zahl3);
-			System.out.println(zahl2);
-		}else if((zahl2>zahl1) && (zahl1>zahl3))
-		{
-			System.out.println(zahl2);
-			System.out.println(zahl1);
-			System.out.println(zahl3);
-		}else if((zahl2>zahl3) && (zahl3>zahl1))
-		{
-			System.out.println(zahl2);
-			System.out.println(zahl3);
-			System.out.println(zahl1);
-		}else if((zahl3>zahl2) && (zahl2>zahl1))
-		{
-			System.out.println(zahl3);
-			System.out.println(zahl2);
-			System.out.println(zahl3);
-		}else if ((zahl3>zahl1) && (zahl1>zahl2))
-		{
-			System.out.println(zahl3);
-			System.out.println(zahl1);
-			System.out.println(zahl2);	
+		if (a > b && a > c && b > c){
+			System.out.println(a);
+			System.out.println(b);
+			System.out.println(c);
 		}
-		}else System.out.println("Einer der Zahlen sind uber 1000 oder kleiner 0 !");
+		
+		if (a > b && a > c && c > b){
+			System.out.println(a);
+			System.out.println(c);
+			System.out.println(b);
+		}
+		
+		if (b > a && b > c && a > c){
+			System.out.println(b);
+			System.out.println(a);
+			System.out.println(c);
+		}
+		
+		if (b > a && b > c && c > a){
+			System.out.println(b);
+			System.out.println(c);
+			System.out.println(a);
+		}
+		
+		if (c > a && c > b && a > b){
+			System.out.println(c);
+			System.out.println(a);
+			System.out.println(b);
+		}
+		
+		if (c > a && c > b && b > a){
+			System.out.println(c);
+			System.out.println(b);
+			System.out.println(a);
+		}	
 	}
-}
+
+	public static void main(String[] args) {
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		int c = scanner.nextInt();
+		
+		do {
+			a = scanner.nextInt();
+			b = scanner.nextInt();
+			c = scanner.nextInt();
+		
+			if (a >= 1000 || b >= 1000 || c >= 1000 || a<=0 || b<=0 || c<=0){
+				System.out.println("Bitte geben sie nur Zahlen zwischen 0 und 1000 ein!");
+			}else{
+				Sort(a,b,c);
+			}			
+		}while ((a && b && c) == 0);
+	}
+}	
+
+			
