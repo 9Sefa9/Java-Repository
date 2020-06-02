@@ -1,0 +1,1 @@
+input swipe 550 12.5 550 1000 && sleep 0.5 && input tap 1000 125 && sleep 0.5 && input tap 550 1000 && sleep 0.5 && input tap 550 2000 && sleep 0.5 && input tap 985 795 && input keyevent 26
