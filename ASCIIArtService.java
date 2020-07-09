@@ -81,6 +81,6 @@ public class ASCIIArtService {
 
     public static void main(String[] args) {
         ASCIIArtService obj = new ASCIIArtService();
-        obj.convertToAscii("G:/Users/Progamer/Desktop/d.jpg");
+        obj.convertToAscii("G:/Users/Progamer/Desktop/20171118_160458.png");
     }
 }
