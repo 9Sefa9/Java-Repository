@@ -15,7 +15,6 @@ public class DepthFirstSearch{
         dfs(node);
     }
 
-
     public static void dfs(Node n){
             n.setVisited(true);
             System.out.println(n.getValue());
