@@ -1,26 +1,16 @@
-import java.util.*;
-/* Vorgang: 
-  procedure DFS(G, v) is
-    label v as discovered
-    for all directed edges from v to w that are in G.adjacentEdges(v) do
-        if vertex w is not labeled as discovered then
-            recursively call DFS(G, w)
-*/
-
-public class DepthFirstSearch{
-    
-    public static void main(String[] args){
+public class BreadthFirstSearch{
+   public static void main(String[] args){
         Node node = generateRandomNodes(); new Node("");
         
         dfs(node);
     }
 
-    public static void dfs(Node n){
+    public static void bfs(Node n){
             n.setVisited(true);
             System.out.println(n.getValue());
             for(Object nextNode :n.getNextNodes()){
                 if(((Node) nextNode).getVisited() != true)
-                    dfs((Node)nextNode);
+                    bfs((Node)nextNode);
             }
     }
     private static Node generateRandomNodes(){
@@ -38,6 +28,4 @@ public class DepthFirstSearch{
         newNode.setNextNodes(n);
         return newNode;
     }
-    
-
 }
