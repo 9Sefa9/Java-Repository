@@ -12,17 +12,7 @@ remove(Node)          -> Remove Node from the list
 */
 public class LinkedList{
 
-    public static void main(String[] a){
-        LinkedList l = new LinkedList();
-        Node n0 = new Node("0");
-        Node n1 = new Node("1");
-         Node n2 = new Node("2");
-          Node n3 = new Node("3");
-           Node n4 = new Node("4");
-             Node n5 = new Node("5");
-      
-        
-    }
+  
     private Node root;
     private int size;
     public LinkedList(){
@@ -110,7 +100,7 @@ public class LinkedList{
     private void decrementSize(){
         this.size =   this.size == 0 ? 0: (this.size-=1);
     }
-    private int size(){
+    public int size(){
         return this.size;
     }
     public void print(){
