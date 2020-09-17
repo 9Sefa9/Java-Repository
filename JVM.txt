@@ -1,2 +1,0 @@
-Zuerst wird der Quellcode durch den compiler in eine Byte Datei namens
-.class datei gespeichert. Dieser klass datei wird durch die JVM in die maschinensprache umgewandelt.
