@@ -8,6 +8,8 @@ public class Node<T>{
     private Node nextNode=null;
     private Node previousNode=null;
 
+    private Node leftNode=null;
+    private Node rightNode=null;
     //für Bäume mit mehr als einem Leaf
     private ArrayList<Node> nextNodes;
 
@@ -45,4 +47,17 @@ public class Node<T>{
     public Node getPreviousNode(){
         return this.previousNode;
     }
+    public void setRightNode(Node right){
+        this.rightNode = right;
+    }
+    public Node getRightNode(){
+        return this.rightNode;
+    }
+    public void setLeftNode(Node left){
+        this.leftNode = left;
+    }
+    public Node getLeftNode(){
+        return this.leftNode;
+    }
+    
 }
