@@ -5,8 +5,9 @@ public class Node<T>{
      
         tree.setLeftNode(9);
         tree.setRightNode(25);  
-        tree.setParentNode(tree);
-        
+        tree.getLeftNode().setParentNode(tree);
+        tree.getRightNode().setParentNode(tree);
+
         tree.getLeftNode().setLeftNode(5);
         tree.getLeftNode().setRightNode(12);
         tree.getLeftNode().getLeftNode().setParentNode(tree.getLeftNode());
@@ -17,23 +18,25 @@ public class Node<T>{
         tree.getLeftNode().getRightNode().getLeftNode().setParentNode(tree.getLeftNode().getRightNode());
         tree.getLeftNode().getRightNode().getRightNode().setParentNode(tree.getLeftNode().getRightNode());
 
-        System.out.println(findInorderSuccessor(tree.getLeftNode()).getValue());
+        System.out.println(findInorderSuccessor(tree.getLeftNode().getRightNode()).getValue());
     }
     public static Node findInorderSuccessor(Node node){
 
-            //links ist nichts und rechts ist nichts => stop.
-            if(node.getLeftNode()==null && node.getRightNode() == null){System.out.println("1."+node.getValue()+"\n"); return node.getParentNode();}
+        Node left=node.getLeftNode();
+        Node right=node.getRightNode();
+        Node parent=node.getPreviousNode();
+        
+        //solange links ein Node ist, gehe Immer tiefer!
+        while(left.getLeftNode()!=null){
+             left = left.getLeftNode();
+        }
+        if(left.getParentNode().getRightNode()!=null){
+         return left.getParentNode().getRightNode().getLeftNode();  
+        }
 
-            //links ist etwas aber rechts ist nichts. => gehe links 
-            if(node.getLeftNode()!=null && node.getRightNode()==null){ System.out.println("2."+node.getValue()+"\n");findInorderSuccessor(node.getLeftNode());}
+        return null;
 
-            //links ist etwas und rechts ist etwas => gehe nach links
-            if(node.getLeftNode() != null && node.getRightNode()!=null) {System.out.println("3."+node.getValue()+"\n"); findInorderSuccessor(node.getLeftNode());}
-
-            //links ist nichts aber rechts etwas => gehe nach rechts.
-            if(node.getLeftNode() == null && node.getRightNode()!=null) {System.out.println("4."+node.getValue()+"\n"); findInorderSuccessor(node.getRightNode());}
-            return null;
-    }
+   }
     private T value;
     private boolean visited =false;
     //private ArrayList GetAdjacentEdges(G,W) wobei der edge von V nach W geht. AM besten iterieren über den 
