@@ -1,6 +1,5 @@
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.net.*;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -13,12 +12,57 @@ public class test {
         test http = new test();
 
         System.out.println("Testing 1 - Send Http GET request");
-        http.sendGet();
+        http.sendGetUrl();
 
      //   System.out.println("\nTesting 2 - Send Http POST request");
      //   http.sendPost();
 
     }
+    private void sendGetUrl() throws Exception{
+        String url = "https://rapidapi.p.rapidapi.com/exchange?from=EUR&to=TRY&q=1.0";
+
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+       //optional default is GET
+        con.setRequestMethod("GET");
+
+       //add request header
+        con.setRequestProperty("User-Agent", USER__AGENT);
+        con.setRequestProperty("x-rapidapi-host", "currency-exchange.p.rapidapi.com");
+        con.setRequestProperty("x-rapidapi-key", "e65ff606d3msha29e85a3e04664cp133d4ajsnbf7e40ad75c4");
+
+        int responseCode = con.getResponseCode();
+        System.out.println("\nSending 'GET' request to URL : " + url);
+        System.out.println("Response Code : " + responseCode);
+
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
+
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+        try(BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("test.json")))) {
+        writer.write(response.toString());
+        }
+      
+       //print result
+        System.out.println(response.toString());
+        }
+     /*   HttpRequest request = HttpRequest.newBuilder()
+		.uri(URI.create("https://rapidapi.p.rapidapi.com/v1/links/new?destination=https%3A%2F%2Frapidapi.com%2F"))
+		.header("x-rapidapi-host", "url-link-shortener.p.rapidapi.com")
+		.header("x-rapidapi-key", "e65ff606d3msha29e85a3e04664cp133d4ajsnbf7e40ad75c4")
+		.method("GET", HttpRequest.BodyPublishers.noBody())
+		.build();
+HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+System.out.println(response.body());
+    }*/
+
+
 
    //HTTP GET request
     private void sendGet() throws Exception {
@@ -55,6 +99,10 @@ public class test {
         System.out.println(response.toString());
 
     }
+
+
+
+    
 
    //HTTP POST request
     private void sendPost() throws Exception {
