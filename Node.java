@@ -2,7 +2,7 @@ import java.util.*;
 public class Node<T>{
     public static void main(String[] args){
         Node<Integer> tree = new Node<Integer>(20);
-     
+        
         tree.setLeftNode(9);
         tree.setRightNode(25);  
         tree.getLeftNode().setParentNode(tree);
@@ -112,7 +112,8 @@ public class Node<T>{
     public Node getParentNode(){
         return this.parentNode;
     }
-    public Node getLeftNode(){
+    publ ic Node getLeftNode(){
+    publ ic Node getLeftNode(){
         return this.leftNode;
     }
     
